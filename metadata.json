@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Copy of Project ATHLOS: The Smart Workout Navigator",
+  "description": "A high-fidelity prototype of a smart workout application that helps users navigate a busy gym by providing real-time exercise alternatives, eliminating wait times and maximizing workout efficiency.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

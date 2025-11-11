@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATHLOS - Workout Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  const colorsList = [
+    ['#0EA5E9', '#38BDF8'], // Ocean Blue
+    ['#7C3AED', '#C084FC'], // Royal Purple
+    ['#F43F5E', '#FB7185'], // Rose Red
+    ['#22C55E', '#86EFAC'], // Emerald Green
+    ['#F59E0B', '#FBBF24'], // Amber Gold
+    ['#14B8A6', '#5EEAD4'], // Aqua Teal
+    ['#000000', '#1E293B']  // Premium Black & Slate
+  ];
+
+  const randomColors = colorsList[Math.floor(Math.random() * colorsList.length)];
+
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'brand-dark': '#0A0A0A',
+          'brand-surface': 'rgba(255, 255, 255, 0.05)',
+          'brand-surface-light': 'rgba(255, 255, 255, 0.1)',
+          'brand-primary': randomColors[0],
+          'brand-primary-light': randomColors[1],
+          'brand-text': '#F8FAFC',
+          'brand-text-secondary': '#94A3B8',
+        }
+      }
+    }
+  }
+</script>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.5.0/"
+  }
+}
+</script>
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+  
+  .animate-fadeInUp {
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+</style>
+</head>
+  <body class="bg-gradient-to-br from-slate-900 to-black">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+This is my html code of my project i want to add database with firebase
